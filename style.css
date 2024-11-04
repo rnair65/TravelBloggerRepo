@@ -1,0 +1,336 @@
+:root {
+    --background: #F0ECE9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #F3F4F6;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  /* available weights: 400, 700 & 400 italic */
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  font-size:.75rem;
+  font-style: italic;
+  color: #424242;
+  letter-spacing: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px;
+  color: #193549;
+}
+
+h1 {
+  font-size: 35px;
+    text-align: center;
+}
+
+.background {
+    background-color: var(--background);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 800px;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.card {
+    position: relative;
+    left: 0px;
+    width: 150px;
+    border-radius: 16px;
+    height: 360px;
+    overflow: hidden;
+    background-color: var(--background);
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+    flex: 0.25 80px;
+}
+
+.card img{
+    height: 360px;
+}
+
+.card:hover {
+    flex: 2;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* header navigation menu */
+header {
+  background-color: #0C1733;
+}
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+   /* position: fixed;*/
+}
+nav .logo-container {
+  max-width: 130px;
+}
+@media (min-width: 768px) {
+  nav .logo-container {
+    max-width: 250px;
+  }
+}
+nav .logo-container a img {
+  margin: 15px 5px;
+}
+nav .navigation-container {
+  width: 100%;
+}
+nav .navigation-container ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav .navigation-container ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav .navigation-container ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-style: italic;
+  color: #FFFFFF;
+  padding: 10px 5px;
+  transition: all 0.9s ease-out;
+}
+@media (min-width: 768px) {
+  nav .navigation-container ul li a {
+    font-size: 1.125rem;
+    padding: 30px 15px;
+  }
+}
+nav .navigation-container ul li a:hover {
+  background-color: #37415c;
+  color: #E0413D;
+}
+/*banner*/
+.banner {
+  padding: 90px 15px;
+  text-align: center;
+    width: 100vw;
+    height: auto;
+    background-image: url("images/EmeraldLake.jpg");
+    object-fit: contain;
+}
+.banner h1 {
+  animation: changeColors 5s infinite;
+}
+@keyframes changeColors {
+  0%   {color: #FFFFFF;}
+  25%  {color: #d1cdcd;}
+  50%  {color: #aba7a7;}
+  75%  {color: #5e5c5c;}
+  100% {color: #000000;}
+}
+.banner p {
+  margin-bottom: 60px;
+  text-shadow: 1px 1px 4px #5c5a5a;
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .banner h1 {
+    font-size: 60px;
+    font-weight: 700;
+  }
+}
+
+.sec-intro {
+  background-color: #E9EBEC;
+  display: flex;
+  clear: right;
+}
+.sec-intro .col {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.sec-intro .col img{
+  border: 5px solid #bbbbbb;
+  border-radius: 0.25rem;
+}
+
+.sec-intro img {
+  width: 500px;
+  height: auto;
+  float: left;
+  margin-right: 20px;
+}
+
+.sec-intro p {
+  vertical-align: middle;
+  width: 1000px;
+}
+
+/**/
+.sec-introf {
+  background-color: #DCD5DC;
+  display: flex;
+  clear: left;
+}
+
+.sec-introf .col {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.sec-introf .col img {
+  border: 5px solid #bbbbbb;
+  border-radius: 0.25rem;
+}
+
+.sec-introf img {
+  width: 500px;
+  height: auto;
+  float: right;
+  margin-right: 20px;
+}
+
+.sec-introf p {
+  vertical-align: middle;
+  width: 1000px;
+}
+/**/
+
+/* .sec-introf {
+  background-color: #DCD5DC;
+}
+.sec-introf .col {
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+}
+.sec-introf .col img {
+  border: 5px solid #bbbbbb;
+  border-radius: 0.25rem;
+} */
+
+.sec-core-services {
+  background-color: #def1fa;
+} 
+.sec-core-services h2 {
+  text-align: center;
+}
+.sec-core-services .sec-core-services-wrapper {
+  display: block;
+}
+.sec-core-services .sec-core-services-wrapper .card {
+  margin-bottom: 60px;
+}
+@media (min-width: 768px) {
+  .sec-core-services .sec-core-services-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sec-core-services .sec-core-services-wrapper .card {
+    flex-basis: 30%;
+  }
+}
+.sec-completed-projects {
+  background-color: #FF9800;
+  text-align: center;
+}
+.sec-completed-projects h3 {
+  color: #FFFFFF;
+}
+.sec-completed-projects p {
+  margin-bottom: 60px;
+}
+@media (min-width: 768px) {
+  .sec-completed-projects h3 {
+    font-size: 2.725rem;
+  }
+}
+.sec-testimonials {
+  background-color: #1C1C1C;
+  background-image: url("./img/binding_dark.gif");
+}
+.sec-testimonials h3 {
+  color: #FF9800;
+  text-align: center;
+}
+.sec-testimonials .sec-testimonials-wrapper .sec-testimonials-wrapper-speaches .card {
+  background-color: rgba(255, 152, 0, 0.3);
+  padding: 15px;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-style: italic;
+  font-size: 0.925rem;
+  line-height: 1.7;
+  margin: 0 0 60px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.sec-testimonials .sec-testimonials-wrapper .sec-testimonials-wrapper-speaches .card blockquote {
+  margin-bottom: 10px;
+}
+.sec-testimonials .sec-testimonials-wrapper .sec-testimonials-wrapper-speaches .card p {
+  margin: 0;
+}
+.sec-testimonials .sec-testimonials-wrapper .sec-testimonials-wrapper-promo-photo img {
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  .sec-testimonials h3 {
+    font-size: 50px;
+  }
+  .sec-testimonials .sec-testimonials-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sec-testimonials .sec-testimonials-wrapper .sec-testimonials-wrapper-speaches{
+    flex-basis: 50%;
+  }
+  .sec-testimonials .sec-testimonials-wrapper .sec-testimonials-wrapper-speaches .card img {
+    border: 2px solid #FF9800;
+    border-radius: 50%;
+  }
+  .sec-testimonials .sec-testimonials-wrapper .sec-testimonials-wrapper-promo-photo {
+    flex-basis: 45%;
+      padding-right: 50px;
+  }
+}
